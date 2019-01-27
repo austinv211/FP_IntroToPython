@@ -2,9 +2,8 @@ There are 65 total Python blocks in the webpage.
 
 We need to create useful comments for every Python code block in the document.
 
-Ani will be doing the first 22.
-Austin will be doing 22 from where Ani's ends.
-Carlos will be doing the last 21 code blocks.
+Ani will be doing the first 32.
+Austin will be doing from where Ani's ends.
 
 To make it easy we can do 3 seperate files so we don't have to deal with merging.
 
