@@ -281,12 +281,12 @@ reveal_type(choose(["Python", 3, 7])
 
 # choose.py
 
-
+#this is our same code from above, see comments above
 import random
 
 from typing import Sequence, TypeVar
 
-
+#here we define our Choosable can only be either a str or float
 Choosable = TypeVar("Choosable", str, float)
 
 
@@ -299,6 +299,34 @@ reveal_type(choose(["Guido", "Jukka", "Ivan"]))
 
 reveal_type(choose([1, 2, 3]))
 
+#this will return float since int is a subtype of float
 reveal_type(choose([True, 42, 3.14]))
 
+#this will return an error since the return type cannot be object
 reveal_type(choose(["Python", 3, 7]))
+
+#------------ Code Section 44 -----------------------
+
+# here we restrict the choose function in our Card Game to accept a sequence of Choosable  and return a choosable
+# which can then is restricted to a type of str or Card
+Choosable = TypeVar("Choosable", str, Card)
+
+def choose(items: Sequence[Choosable]) -> Choosable:
+
+#------------ Code Section 45 -----------------------
+
+# define a function called len, which takes in an obj as a parameter and then return the __len__() method.
+def len(obj):
+    return obj.__len__()
+
+#------------ Code Section 46 -----------------------
+
+# from typing import Sized
+from typing import Sized
+
+# this is our same len definition, but we restrict our obj to objects that fufill the Sized protocol
+def len(obj: Sized) -> int:
+    return obj.__len__()
+
+#------------ Code Section 47 -----------------------
+
