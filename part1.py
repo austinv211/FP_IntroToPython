@@ -154,12 +154,18 @@ circumference.__annotations__
 
 # reveal.py
 
+# imports in built math function
 import math
+
+# you might not know the type after a mathematical operation
+# you can use reveal_type() to find out the type
 reveal_type(math.pi)
 
 radius = 1
 circumference = 2 * math.pi * radius
+#reveal_locals() debugs your hint type local variables and functions
 reveal_locals()
+
 
 
 # ---------------- Code Section 15 ---------------------
